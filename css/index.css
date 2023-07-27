@@ -39,6 +39,18 @@ b{
     font-weight: 700;
 }
 
+@media (pointer:coarse){
+
+    a:focus{
+        outline: none;
+    }
+
+    div:focus{
+        outline: none;
+    }
+
+}
+
 /*Animação de tela-------------------------*/
 
 .page-transition {

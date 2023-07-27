@@ -119,12 +119,14 @@ body::-webkit-scrollbar {
 }
 
 .button_menu:hover{
-    font-size: 0.95em;
-    transition: 0.2s;
-    min-width: 320px;
+    font-size: 0.93em;
+    transition: 0.5s;
+    min-width: 300px;
     padding-right: 12%;
 
 }
+
+
 
 .button_menu img{
     max-width: 40px;
