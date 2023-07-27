@@ -215,6 +215,34 @@ main{
     font-size: 1.1em;
 }
 
+.sobre{
+    background-color:rgb(30, 30, 30);
+    width: 160px;
+    height: 40px;
+
+    margin-top: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    
+    transition: ease 0.5s;
+}
+
+.sobre p{
+    color: white;
+    font-weight: 500;
+    font-size: 0.9em;
+    
+}
+
+.sobre:hover{
+    opacity: 80%;
+    transition: ease 0.5s;
+}
+
+
 /*Rodapé------------------*/
 footer{
     margin-bottom: 25px;
