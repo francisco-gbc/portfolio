@@ -241,6 +241,16 @@ footer{
         justify-content: space-between;
     }
 
+
+    .nav{
+        height: 90px;
+    }
+    
+    .nav img{
+        max-height: 90px;
+        margin-left: 10px;
+    }
+
     .nav a{
         display: none;
     }
