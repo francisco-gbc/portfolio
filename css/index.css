@@ -267,8 +267,6 @@ footer{
         border-radius: 20px;
         width: 340px;
         height: 500px;
-        transition: 1s;
-        
         transition: ease 0.5s;
     }
 
@@ -299,8 +297,6 @@ footer{
         border-radius: 20px;
         width: 650px;
         height: 400px;
-        transition: 1s;
-        
         transition: ease 0.5s;
     }
 
@@ -324,8 +320,6 @@ footer{
         border-radius: 20px;
         width: 100%;
         height: 400px;
-        transition: 1s;
-        
         transition: ease 0.5s;
     }
 
