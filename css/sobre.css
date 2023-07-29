@@ -291,4 +291,8 @@ footer{
     .nav img{
         width:80px;
     }
+    .menu_bar img{
+        width: 30px;
+        margin: 40px;
+    }
 }
