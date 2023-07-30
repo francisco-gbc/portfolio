@@ -193,17 +193,6 @@ main{
 }
 
 
-.monkey{
-    max-width: 80%;
-    max-height: 40%;
-    transition: ease 0.5s;
-}
-
-.card:hover .monkey{
-    max-width: 85%;
-    transition: 0.5s ease;
-}
-
 .card3{
     background-image: url("../assets/imgs/img3.jpg");
     background-size: auto 100%;
