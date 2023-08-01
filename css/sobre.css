@@ -34,6 +34,8 @@ body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*Remover realce azul em smartphones*/
+
+    user-select: none;
 }
 
 a{
@@ -154,6 +156,7 @@ p{
 }
 .biografia{
     text-align:justify;
+    text-align-last: center;
 }
 
 .hist{
