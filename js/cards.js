@@ -1,4 +1,5 @@
-//getting all required elements
+//getting all required elements 
+/*
 const gallery  = document.querySelectorAll(".image"),
 previewBox = document.querySelector(".preview-box"),
 previewImg = previewBox.querySelector("img"),
@@ -65,3 +66,158 @@ window.onload = ()=>{
         
     } 
 }
+
+----------------------------------
+window.onload = () => {
+    const galleries = document.querySelectorAll(".gallery");
+  
+    galleries.forEach((gallery, index) => {
+      const images = gallery.querySelectorAll("img");
+      const totalImg = images.length;
+      let currentImg = 1;
+  
+      const previewBox = document.createElement("div");
+      previewBox.classList.add("preview-box");
+      gallery.appendChild(previewBox);
+  
+      const previewImg = document.createElement("img");
+      previewBox.appendChild(previewImg);
+  
+      const closeIcon = document.createElement("span");
+      closeIcon.classList.add("icon");
+      previewBox.appendChild(closeIcon);
+  
+      const prevBtn = document.createElement("span");
+      prevBtn.classList.add("prev");
+      previewBox.appendChild(prevBtn);
+  
+      const nextBtn = document.createElement("span");
+      nextBtn.classList.add("next");
+      previewBox.appendChild(nextBtn);
+  
+      const shadow = document.createElement("div");
+      shadow.classList.add("shadow");
+      document.body.appendChild(shadow);
+  
+      images.forEach((image, imgIndex) => {
+        image.onclick = () => {
+          showPreview(imgIndex);
+        };
+      });
+  
+      function showPreview(newIndex) {
+        currentImg = newIndex + 1;
+        const imageURL = images[newIndex].src;
+        previewImg.src = imageURL;
+  
+        prevBtn.style.display = newIndex === 0 ? "none" : "block";
+        nextBtn.style.display = newIndex === totalImg - 1 ? "none" : "block";
+  
+        previewBox.classList.add("show");
+        shadow.style.display = "block";
+        document.body.style.overflow = "hidden";
+  
+        prevBtn.onclick = () => {
+          showPreview(newIndex - 1);
+        };
+  
+        nextBtn.onclick = () => {
+          showPreview(newIndex + 1);
+        };
+  
+        closeIcon.onclick = () => {
+          previewBox.classList.remove("show");
+          shadow.style.display = "none";
+          document.body.style.overflow = "scroll";
+        };
+      }
+    });
+  };
+  */
+  window.onload = () => {
+    const galleries = document.querySelectorAll(".gallery");
+
+    galleries.forEach((gallery) => {
+      const images = gallery.querySelectorAll("img");
+      const totalImg = images.length;
+      let currentImgIndex = 0;
+
+      const previewBox = document.createElement("div");
+      previewBox.classList.add("preview-box");
+      gallery.appendChild(previewBox);
+
+      const previewImg = document.createElement("img");
+      previewImg.style.maxWidth = "100%"; 
+      previewImg.style.maxHeight = "100%";
+      previewImg.style.borderRadius = "5px";
+      previewImg.style.margin = "10px";
+      previewBox.appendChild(previewImg);
+
+      const closeIcon = document.createElement("span");
+      closeIcon.classList.add("icon", "icon-close");
+      closeIcon.innerHTML = '<i class="fa-solid fa-xmark icon_card""></i>';
+      previewBox.appendChild(closeIcon);
+
+      const prevBtn = document.createElement("span");
+      prevBtn.classList.add("icon", "icon-prev");
+      prevBtn.innerHTML = '<i class="fa-solid fa-caret-right fa-rotate-180 icon_card""></i>';
+      previewBox.appendChild(prevBtn);
+
+      const nextBtn = document.createElement("span");
+      nextBtn.classList.add("icon", "icon-next");
+      nextBtn.innerHTML = '<i class="fa-solid fa-caret-right icon_card" "></i>';
+      previewBox.appendChild(nextBtn);
+
+      const imageCounter = document.createElement("div");
+      imageCounter.classList.add("image-counter");
+      previewBox.appendChild(imageCounter);
+
+      updateImageCounter();
+
+      const shadow = document.createElement("div");
+      shadow.classList.add("shadow");
+      document.body.appendChild(shadow);
+
+      images.forEach((image, imgIndex) => {
+        image.onclick = () => {
+          showPreview(imgIndex);
+        };
+      });
+
+      function showPreview(newIndex) {
+        currentImgIndex = newIndex;
+        const imageURL = images[newIndex].src;
+        previewImg.src = imageURL;
+
+        prevBtn.style.display = newIndex === 0 ? "none" : "block";
+        nextBtn.style.display = newIndex === totalImg - 1 ? "none" : "block";
+
+        previewBox.style.display = "flex";
+        shadow.style.display = "block";
+        document.body.style.overflow = "hidden";
+
+        updateImageCounter();
+      }
+
+      function closePreview() {
+        previewBox.style.display = "none";
+        shadow.style.display = "none";
+        document.body.style.overflow = "scroll";
+      }
+
+      function updateImageCounter() {
+        imageCounter.innerHTML = `<p class="legenda_slide"> Imagem ${currentImgIndex + 1} de ${totalImg}</p>`;
+      }
+
+      closeIcon.onclick = closePreview;
+      prevBtn.onclick = () => {
+        const newIndex = currentImgIndex === 0 ? totalImg - 1 : currentImgIndex - 1;
+        showPreview(newIndex);
+      };
+
+      nextBtn.onclick = () => {
+        const newIndex = currentImgIndex === totalImg - 1 ? 0 : currentImgIndex + 1;
+        showPreview(newIndex);
+      };
+    });
+  };

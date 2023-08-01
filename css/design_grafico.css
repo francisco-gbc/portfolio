@@ -228,7 +228,7 @@ h1{
   transition: 1s;
 }
 
-/*Images Cards - Lightbox---------------------*/
+/*Images Cards - Lightbox---------------------
 
 .gallery{
   display: flex;
@@ -356,6 +356,121 @@ h1{
     display: none;
 }
 
+*/
+
+ /* Estilos para a exibição das imagens */
+ .gallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .image{
+  min-width: 100%;
+}
+.gallery .image span{
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+.gallery .image img{
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.8s ease;
+}
+.gallery .image:hover img{
+  transform: scale(1.05) ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.image span{
+    border-radius: 20px 20px 0 0;
+}
+
+/* Estilos para o visualizador de imagens */
+.preview-box {
+  display: none;
+  position: fixed;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 25px 25px 0 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  width: 800px;
+  max-width: 85%;
+  border-radius: 10px;
+}
+
+.preview-box img {
+  max-width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.icon-prev {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+
+.icon-next {
+  position: absolute;
+  top: 50%;
+  right: 00px;
+  transform: translateY(-50%);
+}
+
+.image-counter {
+  text-align: center;
+}
+
+.image2{
+  display: none;
+}
+
+.icon_card{
+  color: var(--black3040);
+}
+
+.icon_card:hover{
+  color:var(--black30);
+  opacity: 80%;
+}
+
+.legenda_slide{
+  text-align: center;
+  min-width: 100%;
+
+}
+
+.shadow {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Defina a cor de fundo da sombra (aqui, é usado preto semitransparente) */
+  z-index: 9998; /* Coloque a sombra acima de todos os outros elementos, exceto o visualizador de imagens */
+}
 
 /*Rodapé------------------*/
 footer{
