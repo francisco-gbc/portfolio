@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Senhor do Design</title>
     <link rel="shortcut icon" href="assets/logo/fivecon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/nav_footer.css">
+    <script src="https://kit.fontawesome.com/0bae99b396.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="page-transition">
 
-    <nav>
-        <div class="nav">
-            <a class="projeto_menu" href="index.html">Portfólio</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="contatos.html">Contatos</a>
-            <img src="assets/logo/logo_gif4.gif" alt="">
-            <a class="social" href="https://www.linkedin.com/in/franciscogbc/" target="_blank">Linkedin</a>
-            <a class="social" href="https://www.youtube.com/channel/UCdcf3K3x9B_ZKYjrCOh3uVg" target="_blank">Youtube</a>
-            <a class="social" href="https://www.instagram.com/senhor_do_design/" target="_blank">Instagram</a>
-            <a class="menu_bar" href="contatos.html"><img src="assets/icons/menu.png" alt=""></a>
-        </div>
-
-
-        
-    <main>
-        <div class="hist">
-            <a >Senhor do Design ></a>
-            <a><b> Portfólio (Página em construção)</b></a>
-        </div>
-        
-        <div class="cards">
-            <a href="motion_design.html" class="card card1">
-                <div class="img1"></div>
-                <div class="legenda_card">
-                    <h2>Motion Design</h2>
-                    <p>Arte em movimento que encanta e dá vida a narrativas visuais</p>
-                 </div>  
-            </a>
-
-            
-            <a href="design_grafico.html" class="card card2">
-                <div class="img2">
-                   <!-- <img class="monkey" src="assets/imgs/monkey.png" alt="monkey">-->
-                </div><div class="legenda_card">
-                    <h2>Design Gráfico</h2>
-                    <p>Soluções gráficas memoráveis que cativam e impressionam</p>
-                </div>
-            </a>
-            
-            <a href="ux_ui_design.html" class="card card3">
-                <div class="img3"></div>
-                <div class="legenda_card">
-                    <h2>UX/UI Design</h2>
-                    <p>Criação de produtos valiosos para usuários e empresas</p>
-               
-                </div>
-            </a>    
-        </div>
-        <a class="sobre" href="sobre.html"><p>Sobre</p></a>
-    </main>
-    </nav>
     
+    <div class="menu_absolute"  id="menuContainer"></div>
+
+    <nav>
+        <div class="nav" id='navContainer'></div>
+        <main>
+            <div class="hist">
+                <a>Senhor do Design ></a>
+                <a><b> Portfólio</b></a>
+            </div>
+
+            <div class="cards">
+                <a href="motion_design.html" class="card card1">
+                    <div class="img1"></div>
+                    <div class="legenda_card">
+                        <h2>Motion Design</h2>
+                        <p>Arte em movimento que encanta e dá vida a narrativas visuais</p>
+                    </div>
+                </a>
 
 
-    <footer>
-        <p>© Senhor do Design 2023.<br>
-            Todos os direitos reservados.</p>
-    </footer>
+                <a href="design_grafico.html" class="card card2">
+                    <div class="img2">
+                        <!-- <img class="monkey" src="assets/imgs/monkey.png" alt="monkey">-->
+                    </div>
+                    <div class="legenda_card">
+                        <h2>Design Gráfico</h2>
+                        <p>Soluções gráficas memoráveis que cativam e impressionam</p>
+                    </div>
+                </a>
 
+                <a href="ux_ui_design.html" class="card card3">
+                    <div class="img3"></div>
+                    <div class="legenda_card">
+                        <h2>UX/UI Design</h2>
+                        <p>Criação de produtos valiosos para usuários e empresas</p>
+
+                    </div>
+                </a>
+            </div>
+            <a class="sobre" href="sobre.html">
+                <p>Sobre</p>
+            </a>
+        </main>
+    </nav>
+
+
+    <footer id='footerContainer'></footer>
+
+    <script src="js/nav_footer.js"></script>
+    <script src="js/menu.js"></script>
 </body>
+
 </html>

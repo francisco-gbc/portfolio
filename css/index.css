@@ -82,40 +82,6 @@ body::-webkit-scrollbar {
     border-radius: 20px;       
   }
 
-/*Cabeçalho-------------*/
-
-nav{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-.nav{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    height: 120px;
-    width: 100%;
-    box-shadow: 1px 5px 20px rgb(0,0,0,0.1);
-}
-
-.nav a{
-    font-weight:600;
-}
-
-.nav a:hover{
-    opacity: 60%;
-}
-
-.menu_bar{
-    display: none;
-}
-
 /*Corpo-------------------*/
 
 main{
@@ -129,6 +95,7 @@ main{
 .hist{
     margin-top: 25px;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .cards{
@@ -169,12 +136,6 @@ main{
     transition: ease 1s;
 }
 
-/*
-.img1{
-    width: 400px;
-    height: 400px;
-    background-color: aquamarine;
-}*/
 .card1{
     background-image: url("../assets/imgs/img1.jpg");
     background-size: auto 100%;
@@ -203,8 +164,6 @@ main{
 .img1:hover{
     transform:scale(1.2);
 }
-
-
 
 .legenda_card{
     height: 30%;
@@ -260,18 +219,6 @@ main{
     opacity: 80%;
     transition: ease 0.5s;
 }
-
-
-/*Rodapé------------------*/
-footer{
-    margin-bottom: 25px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-
 
 @media (max-width: 1300px){
 
@@ -375,48 +322,6 @@ footer{
         border-radius: 0 0 20px 20px;
     }
 
-}
-
-@media (max-width: 680px){
-   
-    nav{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        min-width: 100%;
-        max-width: 100%;
-    }
-    
-    .nav{
-        justify-content: space-between;
-    }
-
-    .nav{
-        height: 90px;
-    }
-    
-    .nav img{
-        max-height: 90px;
-        margin-left: 10px;
-    }
-
-    .nav a{
-        display: none;
-    }
-    
-    .nav a:hover{
-        opacity: 60%;
-    }
-
-    .nav .menu_bar{
-        display: flex;
-    }
-    .menu_bar img{
-        width: 30px;
-        margin: 40px;
-    }
-    
 }
 
 @media (max-width: 380px){

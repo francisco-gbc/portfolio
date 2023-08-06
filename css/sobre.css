@@ -46,7 +46,7 @@ a:visited{
     color: inherit;
 }
 
-b{
+ b{
     font-weight: 700;
 }
 
@@ -83,39 +83,6 @@ body::-webkit-scrollbar {
 
 
 
-/*Cabeçalho-------------*/
-
-nav{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 100%;
-    max-width: 100%;
-}
-
-.nav{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    height: 120px;
-    width: 100%;
-    box-shadow: 1px 5px 20px rgb(0,0,0,0.1);
-}
-
-.nav a{
-    font-weight:600;
-}
-
-.nav a:hover{
-    opacity: 60%;
-}
-
-.menu_bar{
-    display: none;
-}
 
 /*Corpo-------------------*/
 
@@ -128,27 +95,27 @@ main{
 
 }
 
-.perfil{
+main .perfil{
     width: 160px;
     border-radius: 100%;
     border: 5px solid black;
     
 }
 
-h2{
+main h2{
     font-weight: 700;
     font-size: 1em;
     margin-top: 5px;
 }
 
-h1{
+main h1{
     font-weight: 700;
     font-size: 1.2em;
     margin-top: 40px;
     margin-bottom: 20px;
     text-transform:  uppercase;
 }
-p{
+main p{
     text-align: center;
 }
 .funcoes{
@@ -170,7 +137,7 @@ p{
     margin-bottom: 40px;
 }
 
-.contato{
+main .contato{
     background-color:rgb(30, 30, 30);
     width: 160px;
     height: 40px;
@@ -183,119 +150,18 @@ p{
     transition: ease 0.5s;
 }
 
-.contato p{
+main .contato p{
     color: white;
     font-weight: 500;
     font-size: 0.9em;
     
 }
 
-.contato:hover{
+main .contato:hover{
     opacity: 80%;
     transition: ease 0.5s;
 }
 
-/*Rodapé------------------*/
-footer{
-    margin-bottom: 25px;
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
-
-
-
-@media (max-width: 1300px){
-
-    .cards{
-        gap: 18px;
-        
-        border-radius: 20px;
-    
-    }
-    
-    .card{
-        border-radius: 20px;
-        width: 340px;
-        height: 500px;
-        transition: 1s;
-        
-        transition: ease 0.5s;
-    }
-
-    .legenda_card{
-        height: 30%;
-        width: 340px;
-        background-color: white;
-        border-radius: 0 0 20px 20px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-}
-
-
-
-@media (max-width: 680px){
-   
-    nav{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        min-width: 100%;
-        max-width: 100%;
-    }
-    
-    .nav{
-        justify-content: space-between;
-    }
-
-
-    .nav{
-        height: 90px;
-    }
-    
-    .nav img{
-        max-height: 90px;
-        margin-left: 10px;
-    }
-
-    .nav a{
-        display: none;
-    }
-    
-    .nav a:hover{
-        opacity: 60%;
-    }
-
-    .nav .menu_bar{
-        display: flex;
-    }
-    .menu_bar img{
-        width: 30px;
-        margin: 40px;
-    }
-    
-}
-
-
-
-@media (max-width: 340px){
-    .nav{
-        gap: 5px;
-    }
-    .projeto_menu{
-        margin-right: 15px;
-    }
-    .nav img{
-        width:80px;
-    }
-    .menu_bar img{
-        width: 30px;
-        margin: 40px;
-    }
+#start_menu3, #start_menu4{
+    cursor: pointer;
 }
